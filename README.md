@@ -1,7 +1,9 @@
 # my-blog
 
-> a vue.js -- my-blog
+> a vue.js demo -- my-blog
 
+## preview
+ http://zh8739.gitee.io/v-demo
 ## Build Setup
 
 ``` bash
