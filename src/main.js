@@ -11,6 +11,10 @@ import axios from 'axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'   // 样式文件需要单独引入
 
+// 解决 ie 不支持 Promise 对象
+import Promise from 'es6-promise'
+Promise.polyfill()
+
 /*
 import axixos from 'axios'
 

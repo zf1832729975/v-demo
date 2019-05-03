@@ -2,8 +2,8 @@
 	<div id="show-blogs" v-theme:column="'wide'">
 		<h1>博客总览</h1>
 		<input type="text" name="" v-model="search" placeholder="搜索">
-	
-		<div class="single-blog" v-for="blog in filterBlogs">
+
+		<div class="single-blog" v-for="blog in filterBlogs" :key="blog.id">
 			<router-link :to="'/blog/' + blog.id">
 				<h2 v-rainbow>{{ blog.title | toUpperCase }}</h2>
 			</router-link>
@@ -31,7 +31,7 @@ export default {
 		axios.get("/posts.json").then(res => {
 			return res.data
 			// console.log(res.json())
-			// this.blogs = res.body.slice(0, 10); 
+			// this.blogs = res.body.slice(0, 10);
 		}).then(data => {
 			let blogsArray = [];
 			// console.log(data, 'data')
@@ -80,7 +80,7 @@ input[type="text"] {
 #show-blogs {
 	max-width: 800px;
 	margin: 0 auto;
-} 
+}
 #show-blogs a {
 	text-decoration:  none;
 }
